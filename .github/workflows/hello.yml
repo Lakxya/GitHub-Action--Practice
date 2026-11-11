@@ -1,0 +1,30 @@
+#Workflow
+#should have name [NO INDENTATION]
+name: Hello
+
+#on tells when the workflow runs[GIVE INDENTATION]
+on:
+  push:
+  pull_request:
+  workflow_dispatch: 
+#Jobs
+#should be inside workflow
+
+#job tells what the workflow should do
+#there can be one or more then one job thats why we write jobs
+#it is a object thats why we need indentation
+jobs:
+  #1st job (give indenation)
+  say-hello:
+    #create a ephermal container with ubuntu running [ test kiya fir delete kr denga)
+    runs-on: ubuntu-latest 
+    #that ephermal container will have steps to execute hence name those steps and use run: to run the command
+    steps:
+      - name: say hello to everyone
+        run: echo "hello bro"
+
+#Steps
+#should be inside jobs
+
+#Actions
+#should be inside steps
