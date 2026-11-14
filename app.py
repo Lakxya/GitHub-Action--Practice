@@ -1,3 +1,4 @@
+#just checking if linter works
 from flask import Flask, render_template
 app = Flask(__name__)
 
