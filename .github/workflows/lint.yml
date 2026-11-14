@@ -1,0 +1,17 @@
+#what is the goal of our workflow
+#goal:whenever someone changes the py code ,
+#the linter will check id the syntax ,formate,indentation(lanting) is correct or not
+name: Auto Linter
+
+on: 
+  push:
+    paths: "*.py"
+#jab bhi .py push honga tab ye chale
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout/clone the code
+        uses: : actions/checkout@v7 #this will clone the repo ,To clone a repository in a GitHub Actions workflow
+        
