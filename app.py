@@ -1,4 +1,5 @@
 #just checking if linter works
+#checking ruff
 from flask import Flask, render_template
 app = Flask(__name__)
 
